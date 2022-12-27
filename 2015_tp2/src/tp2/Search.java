@@ -2,23 +2,26 @@ package tp2;
 
 import java.io.File;
 import java.util.HashMap;
-import java.util.Scanner;
+import java.util.Map;
+
+import com.sun.jdi.Value;
+import com.sun.tools.javac.util.Context.Key;
 
 public class Search {
 	File[] filelist;
+	Map<Key,Value> WordMap;
 	
-	public void SearchInFile(String arg[])
+	public void SearchInFile(String word[])
 	{
-	    allFileList(arg[0]);
-	    HashMap<String, Integer> worddictionary = new HashMap<String,Integer>();
-	    setWords(arg);
+	    allFileList(word[0]);
+	    setWords(word);
 	}
 	
-		public void setWords(String arg[]){
-		    for(int i=1;i<arg.length;i++)
+		public void setWords(String word[]){
+		    for(int i=1;i<word.length;i++)
 		    {
-		        HashMap<String, Integer> worddictionary;
-				worddictionary.put(arg[i],0);
+		        Map<Key, Value> WordMap;
+		        WordMap.put(word[i],0);
 		    }
 		
 	}
