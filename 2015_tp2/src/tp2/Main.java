@@ -33,8 +33,7 @@ public class Main {
 			e.printStackTrace();
 	}
 		
-		Object word;
-		if(word.length<2)
+		if (args.length<2)
 	    {
 	        System.out.println("Invalid argument");
 	        System.exit(0);
