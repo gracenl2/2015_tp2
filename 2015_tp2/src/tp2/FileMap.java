@@ -1,7 +1,6 @@
 package tp2;
 
 import java.util.Collection;
-import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
 
@@ -13,7 +12,8 @@ public class FileMap<K,V> implements Map<K,V> {
     }
     @Override
     public boolean isEmpty() {
-        return false; 
+		return false;
+ 
 
     }
     @Override

@@ -15,21 +15,39 @@ public class Main {
 			BufferedReader myReader = new BufferedReader(new FileReader (myObj));
 			
 			String text;
-			
-			while ((text = myReader.readLine()) != null) {
+			System.out.println("Search ");
+	        
+	        while ((text = myReader.readLine()) != null) {
 				text = text.replaceAll("[^\\w\\s\\ ]", " ");
 				text = text.toLowerCase();
 				System.out.println(text);
 			}
 			
 			myReader.close();
-		}
+			
+	        }
+			
+		
 		catch (FileNotFoundException e) {
 			System.out.println("No file found.");
 			e.printStackTrace();
 	}
+		
+		Object word;
+		if(word.length<2)
+	    {
+	        System.out.println("Invalid argument");
+	        System.exit(0);
+	    }
+
+	    Search obj=new Search();
+
+	    if(!obj.isFilesAvailable())
+	    {
+	        System.out.println("There is no files in given directory");
+	        System.exit(0);
+	    }
 	
 	 
 }	    
-
 }
